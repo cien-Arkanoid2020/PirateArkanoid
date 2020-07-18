@@ -6,6 +6,7 @@ public class Spawn : MonoBehaviour
 {
     public GameObject ball;
     public GameObject bar;
+    public GameObject bg;
     public List<GameObject> wall;
     public List<GameObject> brick;
     public float ball_spawnp;
@@ -17,31 +18,35 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void ball_spawn()
     {
-        ball = Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(0, -3.25f, 0), Quaternion.identity);
+        ball = Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(0, -2.4f, 0), Quaternion.identity);
         ball_count++;
     }
     void bar_spawn()
     {
-        bar = Instantiate<GameObject>(Resources.Load<GameObject>("bar"), new Vector3(0, -3.5f, 0), Quaternion.identity);
+        bar = Instantiate<GameObject>(Resources.Load<GameObject>("bar"), new Vector3(0, -2.5f, 0), Quaternion.identity);
     }
     void wall_spawn()
     {
-        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_l"), new Vector3(-9, 0, 0), Quaternion.identity));
-        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_r"), new Vector3(9, 0, 0), Quaternion.identity));
+        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_l"), new Vector3(-3, 0, 0), Quaternion.identity));
+        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_r"), new Vector3(3, 0, 0), Quaternion.identity));
         wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_u"), new Vector3(0, 5, 0), Quaternion.identity));
-        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_d"), new Vector3(0, -5, 0), Quaternion.identity));
+        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_d"), new Vector3(0, -4, 0), Quaternion.identity));
     }
     void brick_spawn()
     {
         int i, j;
         for(i=0;i<5;i++)
         {
-            for(j=0;j<17;j++)
+            for(j=0;j<5;j++)
             {
-                brick.Add(Instantiate<GameObject>(Resources.Load<GameObject>("brick"), new Vector3(-8 + j, 4-0.5f*i, 0), Quaternion.identity));
+                brick.Add(Instantiate<GameObject>(Resources.Load<GameObject>("brick"), new Vector3(-2 + j, 4-0.5f*i, 0), Quaternion.identity));
                 brick_count++;
             }
         }
+    }
+    void bg_spawn()
+    {
+        bg = Instantiate<GameObject>(Resources.Load<GameObject>("background"), new Vector3(0, 0, 0), Quaternion.identity);
     }
     public void destroy_evr()
     {
@@ -61,6 +66,7 @@ public class Spawn : MonoBehaviour
     }
     void Start()
     {
+        bg_spawn();
         ball_spawn();
         bar_spawn();
         wall_spawn();
