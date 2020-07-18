@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bar_move_keyboard : MonoBehaviour
 {
-    public float bar_spd = 10;
+    public float bar_spd = 5;
     void bar_move()
     {
         if(Input.GetKey(KeyCode.RightArrow))

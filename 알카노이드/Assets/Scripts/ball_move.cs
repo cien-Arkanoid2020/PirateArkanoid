@@ -6,6 +6,7 @@ public class ball_move : MonoBehaviour
 {
     public float ball_spdx;
     public float ball_spdy;
+    public Vector3 ball_spd;
 
     // Start is called before the first frame update
     void ballmove()
@@ -27,7 +28,7 @@ public class ball_move : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

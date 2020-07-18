@@ -23,6 +23,7 @@ public class gameover : MonoBehaviour
         if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count==0)
         {
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().destroy_evr();
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<level_manager>().level++;
             Debug.Log("WIN");
         }
     }
