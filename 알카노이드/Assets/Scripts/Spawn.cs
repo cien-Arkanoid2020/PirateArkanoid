@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject ball;
     public GameObject bar;
     public GameObject bg;
+    public List<GameObject> ball;
     public List<GameObject> wall;
     public List<GameObject> brick;
     public float ball_spawnp;
@@ -18,7 +18,12 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     public void ball_spawn()
     {
-        ball = Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(0, -2.4f, 0), Quaternion.identity);
+        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(0, -2.4f, 0), Quaternion.identity));
+        ball_count++;
+    }
+    public void cannonball_spawn()
+    {
+        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar.transform.localPosition.x, -2.4f, 0), Quaternion.identity));
         ball_count++;
     }
     public void bar_spawn()
@@ -39,8 +44,12 @@ public class Spawn : MonoBehaviour
     public void destroy_evr()
     {
         Destroy(bar);
-        Destroy(ball);
-        while(wall.Count!=0)
+        while (ball.Count != 0)
+        {
+            Destroy(ball[0]);
+            ball.RemoveAt(0);
+        }
+        while (wall.Count!=0)
         {
             Destroy(wall[0]);
             wall.RemoveAt(0);

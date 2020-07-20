@@ -9,6 +9,7 @@ TagManager:
   - ball
   - bar
   - gameover
+  - item
   layers:
   - Default
   - TransparentFX

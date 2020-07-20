@@ -14,7 +14,9 @@ public class destroy_gold : MonoBehaviour
         if (gold_box_cnt == 0)
         {
             Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<item_spawn>().item_spawn_gold(collision.transform.localPosition.x, collision.transform.localPosition.y);
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count--;
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_gold();
         }
     }
     // Start is called before the first frame update

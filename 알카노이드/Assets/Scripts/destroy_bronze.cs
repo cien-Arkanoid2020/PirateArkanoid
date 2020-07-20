@@ -14,7 +14,9 @@ public class destroy_bronze : MonoBehaviour
         if(bronze_box_cnt==0)
         {
             Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<item_spawn>().item_spawn_bronze(collision.transform.localPosition.x, collision.transform.localPosition.y);
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count--;
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_bronze();
         }
     }
     // Start is called before the first frame update

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ball_move : MonoBehaviour
 {
-    public float ball_spdx;
-    public float ball_spdy;
+    public float ball_spdx=0;
+    public float ball_spdy=5;
     public Vector3 ball_spd;
 
     // Start is called before the first frame update

@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class gameover : MonoBehaviour
 {
-
+    public int life_count = 3;
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("ball"))
         {
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_count--;
-            if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_count==0)
+            if (GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_count==0)
+            {
+                Debug.Log(life_count);
+                life_decrease();
+            }
+            if(life_count==0)
             {
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().destroy_evr();
                 Debug.Log("GAMEOVER");
             }
         }
+    }
+    void life_decrease()
+    {
+        life_count--;
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().cannonball_spawn();
     }
     void Win()
     {
