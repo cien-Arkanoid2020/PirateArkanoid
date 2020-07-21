@@ -9,21 +9,6 @@ public class item_spawn : MonoBehaviour
     public List<GameObject> item_sapphire;
     public List<GameObject> item_cannonball;
     // Start is called before the first frame update
-    public void ruby()
-    {
-        GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().life_count++;
-        Debug.Log("check1");
-    }
-    public void sapphire()
-    {
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bar.transform.localScale += new Vector3(0.2f, 0.0f, 0.0f);
-        Debug.Log("check2");
-    }
-    public void cannonball()
-    {
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().cannonball_spawn();
-        Debug.Log("check3");
-    }
     public void item_spawn_wood(float x,float y)
     {
         int spawn_percentage;

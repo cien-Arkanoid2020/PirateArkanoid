@@ -11,7 +11,7 @@ public class score_check : MonoBehaviour
     {
         Debug.Log(score);
         score -= 100;
-        limit_time = 1;
+        limit_time = 10;
     }
     public void score_item()
     {
@@ -41,10 +41,13 @@ public class score_check : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        limit_time -= Time.deltaTime;
-        if(limit_time<=0)
+        if(GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().life_count!=0)
         {
-            time_score();
+            limit_time -= Time.deltaTime;
+            if (limit_time <= 0)
+            {
+                time_score();
+            }
         }
     }
 }

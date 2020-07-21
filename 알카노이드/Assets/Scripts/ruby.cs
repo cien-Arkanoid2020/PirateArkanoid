@@ -8,7 +8,7 @@ public class ruby : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("bar"))
         {
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<item_spawn>().ruby();
+            item_ruby();
             Destroy(gameObject);
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_item();
         }
@@ -17,6 +17,11 @@ public class ruby : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+    public void item_ruby()
+    {
+        GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().life_count++;
+        Debug.Log("check1");
     }
     // Start is called before the first frame update
     void Start()

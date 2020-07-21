@@ -54,7 +54,7 @@ public class crash : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         Debug.Log("check");
-        GameObject.FindGameObjectWithTag("ball").GetComponent<ball_move>().ball_spdy=-4;
+        GameObject.FindGameObjectWithTag("ball").GetComponent<crash>().ball_spdy=-4;
     }
     void ballmove()
     {

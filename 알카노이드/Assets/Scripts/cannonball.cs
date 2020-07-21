@@ -8,7 +8,7 @@ public class cannonball : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("bar"))
         {
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<item_spawn>().cannonball();
+            item_cannonball();
             Destroy(gameObject);
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_item();
         }
@@ -16,6 +16,11 @@ public class cannonball : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void item_cannonball()
+    {
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().cannonball_spawn();
+        Debug.Log("check3");
     }
     // Start is called before the first frame update
     void Start()

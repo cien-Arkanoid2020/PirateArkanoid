@@ -49,17 +49,6 @@ public class Spawn : MonoBehaviour
             Destroy(ball[0]);
             ball.RemoveAt(0);
         }
-        while (wall.Count!=0)
-        {
-            Destroy(wall[0]);
-            wall.RemoveAt(0);
-        }
-        while(brick.Count!=0)
-        {
-            Destroy(brick[0]);
-            brick.RemoveAt(0);
-        }
-
     }
     void Start()
     {

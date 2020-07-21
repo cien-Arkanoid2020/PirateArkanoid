@@ -8,7 +8,7 @@ public class sapphire : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("bar"))
         {
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<item_spawn>().sapphire();
+            item_sapphire();
             Destroy(gameObject);
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_item();
         }
@@ -16,6 +16,11 @@ public class sapphire : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void item_sapphire()
+    {
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bar.transform.localScale += new Vector3(0.2f, 0.0f, 0.0f);
+        Debug.Log("check2");
     }
     // Start is called before the first frame update
     void Start()
