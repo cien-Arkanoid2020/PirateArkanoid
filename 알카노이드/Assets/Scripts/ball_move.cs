@@ -21,6 +21,14 @@ public class ball_move : MonoBehaviour
     {
         ball_spdy = -ball_spdy;
     }
+    public void vertical_down()
+    {
+        ball_spdy = -Mathf.Abs(ball_spdy);
+    }
+    public void vertical_up()
+    {
+        ball_spdy = Mathf.Abs(ball_spdy);
+    }
     public void ball_rotation(float l)
     {
         ball_spdx = -5 * Mathf.Cos(Mathf.PI / 2 - l * Mathf.PI/3);

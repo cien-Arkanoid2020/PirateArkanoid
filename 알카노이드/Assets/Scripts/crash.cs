@@ -34,7 +34,15 @@ public class crash : MonoBehaviour
             }
             if (collision.contacts[0].normal.y != 0)
             {
-                vertical_rev();
+                if(collision.contacts[0].normal.y<0)
+                {
+                    vertical_down();
+                }
+                else
+                {
+                    vertical_up();
+                }
+                //vertical_rev();
             }        
         }
         if(collision.gameObject.CompareTag("gameover"))
@@ -59,6 +67,14 @@ public class crash : MonoBehaviour
     public void vertical_rev()
     {
         ball_spdy = -ball_spdy;
+    }
+    public void vertical_down()
+    {
+        ball_spdy = -Mathf.Abs(ball_spdy);
+    }
+    public void vertical_up()
+    {
+        ball_spdy = Mathf.Abs(ball_spdy);
     }
     public void ball_rotation(float l)
     {
