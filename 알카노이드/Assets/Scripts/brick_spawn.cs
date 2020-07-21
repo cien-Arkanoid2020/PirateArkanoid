@@ -29,6 +29,29 @@ public class brick_spawn : MonoBehaviour
         gold.Add(Instantiate<GameObject>(Resources.Load<GameObject>("box_gold"), new Vector3(x, y, 0), Quaternion.identity));
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count++;
     }
+    public void destroy_evr_brick()
+    {
+        while (wood.Count != 0)
+        {
+            Destroy(wood[0]);
+            wood.RemoveAt(0);
+        }
+        while (bronze.Count != 0)
+        {
+            Destroy(bronze[0]);
+            bronze.RemoveAt(0);
+        }
+        while (silver.Count != 0)
+        {
+            Destroy(silver[0]);
+            silver.RemoveAt(0);
+        }
+        while (gold.Count != 0)
+        {
+            Destroy(gold[0]);
+            gold.RemoveAt(0);
+        }
+    }
     void Start()
     {
         

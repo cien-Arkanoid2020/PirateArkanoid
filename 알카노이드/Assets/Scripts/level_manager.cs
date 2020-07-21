@@ -13,7 +13,7 @@ public class level_manager : MonoBehaviour
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bg_spawn();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_spawn();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bar_spawn();
-        for(int i=0;i<8;i++)
+        /*for(int i=0;i<8;i++)
         {
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<brick_spawn>().gold_box_spawn(-2.15f + 0.6f * i, 4);
         }
@@ -28,13 +28,12 @@ public class level_manager : MonoBehaviour
         for (int i = 0; i < 8; i++)
         {
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<brick_spawn>().wooden_box_spawn(-2.15f + 0.6f * i, 2.65f);
-        }
+        }*/
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<brick_spawn>().wooden_box_spawn(-2.15f + 0.6f * 0, 2.65f);
     }
     public void level_2()
     {
         Debug.Log("level 2");
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().wall_spawn();
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bg_spawn();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_spawn();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bar_spawn();
         for (int i = 0; i < 8; i++)
