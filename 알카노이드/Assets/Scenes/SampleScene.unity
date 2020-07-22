@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 0}
+  bar_long: {fileID: 0}
   bg: {fileID: 0}
   ball: []
   wall: []

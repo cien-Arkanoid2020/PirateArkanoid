@@ -6,7 +6,7 @@ public class ruby : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("bar"))
+        if (collision.gameObject.CompareTag("bar") || collision.gameObject.CompareTag("bar_long"))
         {
             item_ruby();
             Destroy(gameObject);
@@ -16,7 +16,10 @@ public class ruby : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+        else if (collision.gameObject.CompareTag("brick"))
+        {
+            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
+        }
     }
     public void item_ruby()
     {

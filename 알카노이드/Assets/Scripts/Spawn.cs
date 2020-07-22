@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public GameObject bar;
+    public GameObject bar_long;
     public GameObject bg;
     public List<GameObject> ball;
     public List<GameObject> wall;
@@ -26,9 +27,19 @@ public class Spawn : MonoBehaviour
         ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar.transform.localPosition.x, -2.4f, 0), Quaternion.identity));
         ball_count++;
     }
+    public void cannonball_spawn_long()
+    {
+        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar_long.transform.localPosition.x, -2.4f, 0), Quaternion.identity));
+        ball_count++;
+    }
     public void bar_spawn()
     {
         bar = Instantiate<GameObject>(Resources.Load<GameObject>("bar"), new Vector3(0, -2.5f, 0), Quaternion.identity);
+    }
+    public void bar_spawn_long()
+    {
+        bar_long = Instantiate<GameObject>(Resources.Load<GameObject>("bar_long"), new Vector3(bar.transform.localPosition.x, -2.5f, 0), Quaternion.identity);
+        Destroy(bar);
     }
     public void wall_spawn()
     {
@@ -44,10 +55,12 @@ public class Spawn : MonoBehaviour
     public void destroy_evr()
     {
         Destroy(bar);
+        Destroy(bar_long);
         while (ball.Count != 0)
         {
             Destroy(ball[0]);
             ball.RemoveAt(0);
+            ball_count--;
         }
     }
     void Start()

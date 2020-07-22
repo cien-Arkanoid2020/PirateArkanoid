@@ -11,11 +11,18 @@ public class ball_move : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log(collision.contacts[0].normal*5);
-        if (collision.gameObject.CompareTag("bar"))
+        if (collision.gameObject.CompareTag("bar")|| collision.gameObject.CompareTag("bar_long"))
         {
             if(collision.contacts[0].normal.x!=0)
             {
-                horizontal_rev();
+                if (collision.contacts[0].normal.x < 0)
+                {
+                    horizontal_left();
+                }
+                else
+                {
+                    horizontal_right();
+                }
             }
             else
             {
@@ -30,7 +37,14 @@ public class ball_move : MonoBehaviour
         {
             if (collision.contacts[0].normal.x != 0)
             {
-                horizontal_rev();
+                if (collision.contacts[0].normal.x < 0)
+                {
+                    horizontal_left();
+                }
+                else
+                {
+                    horizontal_right();
+                }
             }
             if (collision.contacts[0].normal.y != 0)
             {
@@ -42,7 +56,6 @@ public class ball_move : MonoBehaviour
                 {
                     vertical_up();
                 }
-                //vertical_rev();
             }        
         }
         if(collision.gameObject.CompareTag("gameover"))
@@ -51,22 +64,17 @@ public class ball_move : MonoBehaviour
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_count--;
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("check");
-        GameObject.FindGameObjectWithTag("ball").GetComponent<ball_move>().ball_spdy=-4;
-    }
     void ballmove()
     {
         transform.Translate(ball_spdx * Time.deltaTime, ball_spdy * Time.deltaTime, 0);
     }
-    public void horizontal_rev()
+    public void horizontal_left()
     {
-        ball_spdx = -ball_spdx;
+        ball_spdx = -Mathf.Abs(ball_spdx);
     }
-    public void vertical_rev()
+    public void horizontal_right()
     {
-        ball_spdy = -ball_spdy;
+        ball_spdx = Mathf.Abs(ball_spdx);
     }
     public void vertical_down()
     {

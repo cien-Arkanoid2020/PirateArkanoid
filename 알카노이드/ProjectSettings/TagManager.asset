@@ -10,6 +10,7 @@ TagManager:
   - bar
   - gameover
   - item
+  - bar_long
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,7 @@ public class destroy_gold : MonoBehaviour
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count--;
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_gold();
         }
+
     }
     // Start is called before the first frame update
     void Start()

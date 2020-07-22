@@ -5,6 +5,13 @@ using UnityEngine;
 public class bar_move_keyboard : MonoBehaviour
 {
     public float bar_spd = 5;
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("bar"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
     void bar_move()
     {
         if(Input.GetKey(KeyCode.RightArrow))

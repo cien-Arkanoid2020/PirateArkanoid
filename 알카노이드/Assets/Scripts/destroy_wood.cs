@@ -13,6 +13,7 @@ public class destroy_wood : MonoBehaviour
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count--;
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_wood();
         }
+        GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().Win();
     }
     // Start is called before the first frame update
     void Start()
