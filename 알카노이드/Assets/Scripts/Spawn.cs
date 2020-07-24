@@ -50,7 +50,7 @@ public class Spawn : MonoBehaviour
     }
     public void bg_spawn()
     {
-        bg = Instantiate<GameObject>(Resources.Load<GameObject>("background"), new Vector3(0, 0, 0), Quaternion.identity);
+        bg = Instantiate<GameObject>(Resources.Load<GameObject>("background"), new Vector3(0, 0, 1), Quaternion.identity);
     }
     public void destroy_evr()
     {
