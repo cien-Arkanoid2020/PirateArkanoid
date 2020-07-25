@@ -24,33 +24,38 @@ public class Spawn : MonoBehaviour
     }
     public void cannonball_spawn()
     {
-        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar.transform.localPosition.x, -2.4f, 0), Quaternion.identity));
+        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar.transform.localPosition.x, -3.3f, 0), Quaternion.identity));
         ball_count++;
     }
     public void cannonball_spawn_long()
     {
-        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar_long.transform.localPosition.x, -2.4f, 0), Quaternion.identity));
+        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar_long.transform.localPosition.x, -3.3f, 0), Quaternion.identity));
         ball_count++;
     }
     public void bar_spawn()
     {
-        bar = Instantiate<GameObject>(Resources.Load<GameObject>("bar"), new Vector3(0, -2.5f, 0), Quaternion.identity);
+        bar = Instantiate<GameObject>(Resources.Load<GameObject>("bar"), new Vector3(0, -3.5f, 0), Quaternion.identity);
     }
     public void bar_spawn_long()
     {
-        bar_long = Instantiate<GameObject>(Resources.Load<GameObject>("bar_long"), new Vector3(bar.transform.localPosition.x, -2.5f, 0), Quaternion.identity);
+        bar_long = Instantiate<GameObject>(Resources.Load<GameObject>("bar_long"), new Vector3(bar.transform.localPosition.x, -3.5f, 0), Quaternion.identity);
         Destroy(bar);
     }
     public void wall_spawn()
     {
-        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_l"), new Vector3(-3, 0, 0), Quaternion.identity));
-        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_r"), new Vector3(3, 0, 0), Quaternion.identity));
+        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_l"), new Vector3(-3.3f, 0, 0), Quaternion.identity));
+        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_r"), new Vector3(3.3f, 0, 0), Quaternion.identity));
         wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_u"), new Vector3(0, 5, 0), Quaternion.identity));
-        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_d"), new Vector3(0, -4, 0), Quaternion.identity));
+        wall.Add(Instantiate<GameObject>(Resources.Load<GameObject>("wall_d"), new Vector3(0, -5, 0), Quaternion.identity));
     }
     public void bg_spawn()
     {
-        bg = Instantiate<GameObject>(Resources.Load<GameObject>("background"), new Vector3(0, 0, 1), Quaternion.identity);
+        bg = Instantiate<GameObject>(Resources.Load<GameObject>("background"), new Vector3(0, 0, 0), Quaternion.identity);
+    }
+    public void destroy_bar()
+    {
+        Destroy(bar);
+        Destroy(bar_long);
     }
     public void destroy_evr()
     {

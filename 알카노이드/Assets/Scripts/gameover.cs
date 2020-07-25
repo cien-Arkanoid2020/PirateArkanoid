@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gameover : MonoBehaviour
 {
@@ -19,12 +20,16 @@ public class gameover : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().destroy_evr();
                 Debug.Log("GAMEOVER");
+                SceneManager.LoadScene("End");
             }
         }
     }
     void life_decrease()
     {
         life_count--;
+        Destroy(GameObject.Find("bar_long"));
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().destroy_bar();
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bar_spawn();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().cannonball_spawn();
     }
     public void Win()
@@ -32,6 +37,7 @@ public class gameover : MonoBehaviour
         if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count==0)
         {
             Debug.Log("WIN");
+            SceneManager.LoadScene("Level2");
         }
     }
     void Start()
