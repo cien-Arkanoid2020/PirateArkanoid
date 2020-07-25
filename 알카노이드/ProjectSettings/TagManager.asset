@@ -11,6 +11,7 @@ TagManager:
   - gameover
   - item
   - bar_long
+  - score_manager
   layers:
   - Default
   - TransparentFX
