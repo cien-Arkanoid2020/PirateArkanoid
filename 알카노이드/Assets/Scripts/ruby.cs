@@ -23,7 +23,11 @@ public class ruby : MonoBehaviour
     }
     public void item_ruby()
     {
-        GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().life_count++;
+        if(GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().life_count<3)
+        { 
+            GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().life_count++;
+            GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().life_add(GameObject.FindGameObjectWithTag("gameover").GetComponent<gameover>().life_count);
+        }
         Debug.Log("check1");
     }
     // Start is called before the first frame update
