@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class level_manager : MonoBehaviour
+public class level1clear : MonoBehaviour
 {
-    public int level = 1;
-    public void level_clear_ui()
-    {
-        
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +14,10 @@ public class level_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().brick_count == 0)
+        {
+            Debug.Log("WIN");
+            SceneManager.LoadScene("Level1_clear");
+        }
     }
 }

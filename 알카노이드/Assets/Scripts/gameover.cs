@@ -11,14 +11,14 @@ public class gameover : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("ball"))
         {
-            if (GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_count==0)
+            if (GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().ball_count==0)
             {
                 Debug.Log(life_count);
                 life_decrease();
             }
             if(life_count==0)
             {
-                GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().destroy_evr();
+                GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().destroy_evr();
                 Debug.Log("GAMEOVER");
                 SceneManager.LoadScene("End");
             }
@@ -28,16 +28,17 @@ public class gameover : MonoBehaviour
     {
         life_count--;
         Destroy(GameObject.Find("bar_long"));
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().destroy_bar();
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bar_spawn();
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().cannonball_spawn();
+        GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().destroy_bar();
+        GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().bar_spawn();
+        GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().cannonball_spawn();
     }
     public void Win()
     {
-        if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count==0)
+        if(GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().brick_count==0)
         {
             Debug.Log("WIN");
-            SceneManager.LoadScene("Level2");
+            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().destroy_evr();
+            Time.timeScale = 0.0f;
         }
     }
     void Start()

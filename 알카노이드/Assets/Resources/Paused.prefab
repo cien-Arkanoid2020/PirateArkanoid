@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1237716379743382746}
   - component: {fileID: 6424732043049329316}
   - component: {fileID: 1789046229044062317}
-  - component: {fileID: 6296798028656901604}
   - component: {fileID: 5538520452174209022}
   m_Layer: 5
   m_Name: Paused
@@ -106,18 +105,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6296798028656901604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570956149255176210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 776d860b54f684a458d6a97b325229e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5538520452174209022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85fc816521b74334bb4f04202a258c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Paused: {fileID: 0}
 --- !u!1 &1612120431797078528
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +466,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6296798028656901604}
+      - m_Target: {fileID: 0}
         m_MethodName: ChangeStartScene
         m_Mode: 1
         m_Arguments:
@@ -1015,7 +1001,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6296798028656901604}
+      - m_Target: {fileID: 0}
         m_MethodName: ChangeLevel1Scene
         m_Mode: 1
         m_Arguments:

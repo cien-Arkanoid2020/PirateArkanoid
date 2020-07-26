@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4012766721094323264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4012766721094323276}
+  - component: {fileID: 4012766721094323277}
+  - component: {fileID: 4012766721094323278}
+  - component: {fileID: 4012766721094323279}
+  m_Layer: 0
+  m_Name: spawn_manager
+  m_TagString: spawn_manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4012766721094323276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012766721094323264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 130.48398, y: 299.42017, z: -619.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4012766721094323277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012766721094323264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653e25e3aa9d8de439044de664e298c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 0}
+  bar_long: {fileID: 0}
+  bg: {fileID: 0}
+  ball: []
+  wall: []
+  brick: []
+  ball_spawnp: 0
+  bar_spawnp: 0
+  wall_spawnp: 0
+  brick_spawnp: 0
+  ball_count: 0
+  brick_count: 0
+--- !u!114 &4012766721094323278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012766721094323264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5219fbe86196b9a4db7648ed9f364f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: []
+  bronze: []
+  silver: []
+  gold: []
+--- !u!114 &4012766721094323279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012766721094323264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e3cc8cfa62f884c88756d1774202fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentage: 0
+  item_ruby: []
+  item_sapphire: []
+  item_cannonball: []

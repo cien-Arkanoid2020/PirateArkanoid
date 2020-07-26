@@ -9,7 +9,7 @@ public class life_point : MonoBehaviour
     // Start is called before the first frame update
     public void life()
     {
-        if (GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_count == 0)
+        if (GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().ball_count == 0)
         {
             life_p--;
             Debug.Log(life_p);
@@ -18,7 +18,7 @@ public class life_point : MonoBehaviour
             {
                 time -= Time.deltaTime;
             }
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().cannonball_spawn();
+            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().cannonball_spawn();
             
         }
     }

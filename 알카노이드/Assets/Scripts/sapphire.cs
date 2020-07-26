@@ -10,12 +10,12 @@ public class sapphire : MonoBehaviour
         {
             item_sapphire();
             Destroy(gameObject);
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_item();
+            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<score_check>().score_item();
         }
         else if(collision.gameObject.CompareTag("bar_long"))
         {
             Destroy(gameObject);
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<score_check>().score_item();
+            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<score_check>().score_item();
         }
         else if (collision.gameObject.CompareTag("gameover"))
         {
@@ -28,8 +28,8 @@ public class sapphire : MonoBehaviour
     }
     public void item_sapphire()
     {
-        //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bar.transform.localScale += new Vector3(0.2f, 0.0f, 0.0f);
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().bar_spawn_long();
+        //GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().bar.transform.localScale += new Vector3(0.2f, 0.0f, 0.0f);
+        GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().bar_spawn_long();
         Debug.Log("check2");
     }
     // Start is called before the first frame update

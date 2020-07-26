@@ -12,6 +12,10 @@ TagManager:
   - item
   - bar_long
   - score_manager
+  - clearui
+  - spawn_manager
+  - level_manager
+  - scene_manager
   layers:
   - Default
   - TransparentFX

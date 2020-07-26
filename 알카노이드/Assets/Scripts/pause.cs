@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class pause : MonoBehaviour
 {
-    public GameObject Paused;
     public void pause_game()
     {
         Time.timeScale = 0.0f;

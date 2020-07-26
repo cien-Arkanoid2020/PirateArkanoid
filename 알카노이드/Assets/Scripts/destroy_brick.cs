@@ -10,7 +10,7 @@ public class destroy_brick : MonoBehaviour
         if(collision.gameObject.CompareTag("ball"))
         {
             Destroy(gameObject);
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count--;
+            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().brick_count--;
         }
     }
     void Start()

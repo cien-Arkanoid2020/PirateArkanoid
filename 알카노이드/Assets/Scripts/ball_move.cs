@@ -61,7 +61,7 @@ public class ball_move : MonoBehaviour
         if(collision.gameObject.CompareTag("gameover"))
         {
             Destroy(gameObject);
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().ball_count--;
+            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().ball_count--;
         }
     }
     void ballmove()

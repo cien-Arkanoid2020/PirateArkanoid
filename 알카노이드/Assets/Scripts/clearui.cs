@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class level_manager : MonoBehaviour
+public class clearui : MonoBehaviour
 {
-    public int level = 1;
-    public void level_clear_ui()
+    public void clear_ui_active()
     {
-        
+        gameObject.SetActive(true);
+    }
+    public void clear_ui_inactive()
+    {
+        gameObject.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

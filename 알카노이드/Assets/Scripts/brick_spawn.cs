@@ -12,22 +12,22 @@ public class brick_spawn : MonoBehaviour
     public void wooden_box_spawn(float x, float y)
     {
         wood.Add(Instantiate<GameObject>(Resources.Load<GameObject>("box_wood"), new Vector3(x, y, 0), Quaternion.identity));
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count++;
+        GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().brick_count++;
     }
     public void bronze_box_spawn(float x, float y)
     {
         bronze.Add(Instantiate<GameObject>(Resources.Load<GameObject>("box_bronze"), new Vector3(x, y, 0), Quaternion.identity));
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count++;
+        GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().brick_count++;
     }
     public void silver_box_spawn(float x, float y)
     {
         silver.Add(Instantiate<GameObject>(Resources.Load<GameObject>("box_silver"), new Vector3(x, y, 0), Quaternion.identity));
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count++;
+        GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().brick_count++;
     }
     public void gold_box_spawn(float x, float y)
     {
         gold.Add(Instantiate<GameObject>(Resources.Load<GameObject>("box_gold"), new Vector3(x, y, 0), Quaternion.identity));
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count++;
+        GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().brick_count++;
     }
     public void destroy_evr_brick()
     {

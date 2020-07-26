@@ -14,8 +14,8 @@ public class destroy_gold : MonoBehaviour
         if (gold_box_cnt == 0)
         {
             Destroy(gameObject);
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<item_spawn>().item_spawn_gold(collision.transform.localPosition.x, collision.transform.localPosition.y);
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawn>().brick_count--;
+            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<item_spawn>().item_spawn_gold(collision.transform.localPosition.x, collision.transform.localPosition.y);
+            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().brick_count--;
             GameObject.FindGameObjectWithTag("score_manager").GetComponent<score_check>().score_gold();
         }
 
