@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class destroy_gold : MonoBehaviour
 {
-    int gold_box_cnt = 5;
+    int gold_box_cnt = 4;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("ball"))

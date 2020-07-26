@@ -16,6 +16,7 @@ TagManager:
   - spawn_manager
   - level_manager
   - scene_manager
+  - score
   layers:
   - Default
   - TransparentFX

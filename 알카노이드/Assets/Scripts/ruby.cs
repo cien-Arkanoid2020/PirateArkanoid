@@ -10,7 +10,7 @@ public class ruby : MonoBehaviour
         {
             item_ruby();
             Destroy(gameObject);
-            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<score_check>().score_item();
+            GameObject.FindGameObjectWithTag("score_manager").GetComponent<score_check>().score_item();
         }
         else if(collision.gameObject.CompareTag("gameover"))
         {

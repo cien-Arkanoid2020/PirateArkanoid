@@ -14,16 +14,16 @@ public class item_spawn : MonoBehaviour
         int spawn_percentage;
         float select_item;
         spawn_percentage = Random.Range(0, 100);
-        if (spawn_percentage<3)
+        if (spawn_percentage<5)
         {
             Debug.Log("w o");
             select_item = Random.Range(0, 100);
-            if (select_item <33)
+            if (select_item <25)
             {
                 item_ruby.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ruby"), new Vector3(x,y,0), Quaternion.identity));
                 Debug.Log("r");
             }
-            else if (select_item < 66)
+            else if (select_item < 50)
             {
                 item_sapphire.Add(Instantiate<GameObject>(Resources.Load<GameObject>("sapphire"), new Vector3(x, y, 0), Quaternion.identity));
                 Debug.Log("s");
@@ -42,16 +42,16 @@ public class item_spawn : MonoBehaviour
         int spawn_percentage;
         float select_item;
         spawn_percentage = Random.Range(0, 100);
-        if (spawn_percentage < 5)
+        if (spawn_percentage < 20)
         {
             Debug.Log("b o");
             select_item = Random.Range(0, 100);
-            if (select_item < 33)
+            if (select_item < 25)
             {
                 item_ruby.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ruby"), new Vector3(x, y, 0), Quaternion.identity));
                 Debug.Log("r");
             }
-            else if (select_item < 66)
+            else if (select_item < 50)
             {
                 item_sapphire.Add(Instantiate<GameObject>(Resources.Load<GameObject>("sapphire"), new Vector3(x, y, 0), Quaternion.identity));
                 Debug.Log("s");
@@ -70,16 +70,16 @@ public class item_spawn : MonoBehaviour
         int spawn_percentage;
         float select_item;
         spawn_percentage = Random.Range(0, 100);
-        if (spawn_percentage < 10)
+        if (spawn_percentage < 30)
         {
             Debug.Log("s o");
             select_item = Random.Range(0, 100);
-            if (select_item < 33)
+            if (select_item < 25)
             {
                 item_ruby.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ruby"), new Vector3(x, y, 0), Quaternion.identity));
                 Debug.Log("r");
             }
-            else if (select_item < 66)
+            else if (select_item < 50)
             {
                 item_sapphire.Add(Instantiate<GameObject>(Resources.Load<GameObject>("sapphire"), new Vector3(x, y, 0), Quaternion.identity));
                 Debug.Log("s");
@@ -98,16 +98,16 @@ public class item_spawn : MonoBehaviour
         int spawn_percentage;
         float select_item;
         spawn_percentage = Random.Range(0, 100);
-        if (spawn_percentage < 20)
+        if (spawn_percentage < 50)
         {
             Debug.Log("g o");
             select_item = Random.Range(0, 100);
-            if (select_item < 33)
+            if (select_item < 25)
             {
                 item_ruby.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ruby"), new Vector3(x, y, 0), Quaternion.identity));
                 Debug.Log("r");
             }
-            else if (select_item < 66)
+            else if (select_item < 50)
             {
                 item_sapphire.Add(Instantiate<GameObject>(Resources.Load<GameObject>("sapphire"), new Vector3(x, y, 0), Quaternion.identity));
                 Debug.Log("s");

@@ -11,14 +11,14 @@ public class cannonball : MonoBehaviour
             item_cannonball();
             Destroy(gameObject);
             Debug.Log("check");
-            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<score_check>().score_item();
+            GameObject.FindGameObjectWithTag("score_manager").GetComponent<score_check>().score_item();
         }
         else if(collision.gameObject.CompareTag("bar_long"))
         {
             item_cannonball_long();
             Destroy(gameObject);
             Debug.Log("check");
-            GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<score_check>().score_item();
+            GameObject.FindGameObjectWithTag("score_manager").GetComponent<score_check>().score_item();
         }
         else if (collision.gameObject.CompareTag("brick"))
         {
