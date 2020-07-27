@@ -10,7 +10,7 @@ public class score_board : MonoBehaviour
     // Start is called before the first frame update
     void scoreboard()
     {
-        score_text.text = "score : " + GameObject.FindGameObjectWithTag("score_manager").GetComponent<score_check>().score;
+        score_text.text = "score : " + GameObject.FindGameObjectWithTag("score").GetComponent<score_save>().total_score;
     }
     void Start()
     {
