@@ -10,7 +10,7 @@ public class ball_move : MonoBehaviour
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log(collision.contacts[0].normal*5);
+        GameObject.FindGameObjectWithTag("sound_manager").GetComponent<sound_manager>().crash_play();
         if (collision.gameObject.CompareTag("bar")|| collision.gameObject.CompareTag("bar_long"))
         {
             if(collision.contacts[0].normal.x!=0)

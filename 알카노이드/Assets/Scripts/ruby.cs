@@ -39,6 +39,6 @@ public class ruby : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, -1 * Time.deltaTime, 0);
+        transform.Translate(0, -1.5f * Time.deltaTime, 0);
     }
 }

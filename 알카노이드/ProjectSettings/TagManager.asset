@@ -17,6 +17,8 @@ TagManager:
   - level_manager
   - scene_manager
   - score
+  - sound
+  - sound_manager
   layers:
   - Default
   - TransparentFX

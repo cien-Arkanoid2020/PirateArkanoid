@@ -19,17 +19,20 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     public void ball_spawn()
     {
+        GameObject.FindGameObjectWithTag("sound_manager").GetComponent<sound_manager>().shoot_play();
         ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(0, -2.4f, 0), Quaternion.identity));
         ball_count++;
     }
     public void cannonball_spawn()
     {
-        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar.transform.localPosition.x, -3.3f, 0), Quaternion.identity));
+        GameObject.FindGameObjectWithTag("sound_manager").GetComponent<sound_manager>().shoot_play();
+        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar.transform.localPosition.x, -3.4f, 0), Quaternion.identity));
         ball_count++;
     }
     public void cannonball_spawn_long()
     {
-        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar_long.transform.localPosition.x, -3.3f, 0), Quaternion.identity));
+        GameObject.FindGameObjectWithTag("sound_manager").GetComponent<sound_manager>().shoot_play();
+        ball.Add(Instantiate<GameObject>(Resources.Load<GameObject>("ball"), new Vector3(bar_long.transform.localPosition.x, -3.4f, 0), Quaternion.identity));
         ball_count++;
     }
     public void bar_spawn()
