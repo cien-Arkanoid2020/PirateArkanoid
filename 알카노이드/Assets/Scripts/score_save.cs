@@ -12,7 +12,10 @@ public class score_save : MonoBehaviour
             total_score = total_score + GameObject.FindGameObjectWithTag("score_manager").GetComponent<score_check>().score;
         }
     }
-    
+    public void if_die()
+    {
+        total_score = total_score + GameObject.FindGameObjectWithTag("score_manager").GetComponent<score_check>().score;
+    }
     // Start is called before the first frame update
     void Start()
     {

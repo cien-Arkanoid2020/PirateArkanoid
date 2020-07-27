@@ -21,6 +21,24 @@ public class rank : MonoBehaviour
             wood_rank.gameObject.transform.localScale = new Vector3(1, 0.8f, 1);
             rank_text.text = "Wood";
         }
+        else if(score < 2000)
+        {
+            wood_rank = Instantiate<GameObject>(Resources.Load<GameObject>("box_bronze"), new Vector3(0, 0, 0), Quaternion.identity);
+            wood_rank.gameObject.transform.localScale = new Vector3(1, 0.8f, 1);
+            rank_text.text = "Bronze";
+        }
+        else if (score < 3000)
+        {
+            wood_rank = Instantiate<GameObject>(Resources.Load<GameObject>("box_silver"), new Vector3(0, 0, 0), Quaternion.identity);
+            wood_rank.gameObject.transform.localScale = new Vector3(1, 0.8f, 1);
+            rank_text.text = "Silver";
+        }
+        else
+        {
+            wood_rank = Instantiate<GameObject>(Resources.Load<GameObject>("box_gold"), new Vector3(0, 0, 0), Quaternion.identity);
+            wood_rank.gameObject.transform.localScale = new Vector3(1, 0.8f, 1);
+            rank_text.text = "Gold";
+        }
     }
     void Start()
     {

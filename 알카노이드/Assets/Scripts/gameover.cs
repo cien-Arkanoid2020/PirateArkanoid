@@ -20,6 +20,7 @@ public class gameover : MonoBehaviour
             if(life_count==0)
             {
                 GameObject.FindGameObjectWithTag("spawn_manager").GetComponent<Spawn>().destroy_evr();
+                GameObject.FindGameObjectWithTag("score").GetComponent<score_save>().if_die();
                 Debug.Log("GAMEOVER");
                 SceneManager.LoadScene("End");
             }
