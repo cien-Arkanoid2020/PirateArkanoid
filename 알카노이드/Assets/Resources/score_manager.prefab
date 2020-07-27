@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 204079148536238750}
   - component: {fileID: 204079148536238745}
   - component: {fileID: 204079148536238744}
+  - component: {fileID: 6179841041740688716}
   m_Layer: 0
   m_Name: score_manager
   m_TagString: score_manager
@@ -55,5 +56,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a32badb243bae374ea7f2fb4e3c44e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6179841041740688716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204079148536238747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388e963aa8e69a24aa729dd8dfeebf9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
