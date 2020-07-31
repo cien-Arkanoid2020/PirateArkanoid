@@ -1142,6 +1142,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: background
       objectReference: {fileID: 0}
+    - target: {fileID: 7660379544685015870, guid: 233759d4e116f94448cec7d6fb8537b9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a6b4135a2adf4f8408c4b484f4de1fa2,
+        type: 3}
     - target: {fileID: 8267280589301680097, guid: 233759d4e116f94448cec7d6fb8537b9,
         type: 3}
       propertyPath: m_LocalPosition.x
